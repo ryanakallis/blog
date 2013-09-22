@@ -1,0 +1,58 @@
+<div id = "wrapper">
+	
+	<div id = "noticeContainer">
+		
+		<p id="notice"><%= notice %></p>
+
+	</div>
+
+	<div id = "blogEntry">
+		
+		<div id = "postTitle">
+			
+			<p><h3>Title:</h3>
+				<span class = "title"><%= @post.title %></span>
+			</p>
+
+		</div>
+		
+		<div id = "postBody">
+		
+			<p>
+			  <h3>Body:</h3>
+			  	<span class = "body">
+				  	<%= 
+					  	str = @post.body
+						first_500_words = str.split(" ").first(500).join(" ")
+						first_500_chars = str[0..500]
+					  %>
+				</span>
+			</p>
+
+			<div id = "editControls">
+
+				<%= link_to 'Edit', edit_post_path(@post) %> 
+				
+			</div>
+
+		</div>
+
+		<div id = "commentsBody">
+
+			<!-- Display comments -->
+			<h2 class  = "commentsHeading" >Comments Section</h2>
+			<%= render @post.comments %>
+
+			<!-- Display comments Form-->
+			<h2 class  = "commentsHeading" >Add a comment:</h2>
+			<%= render "comments/form" %>
+
+		</div>
+		<div id = "backControls">
+
+			<%= link_to 'Back', posts_path %>
+				
+		</div>
+
+	</div>
+</div>

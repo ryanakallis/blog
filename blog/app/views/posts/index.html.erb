@@ -1,0 +1,28 @@
+<div id = "wrapper">
+  <div id = "pageTitle">
+    <h1 class = "mainHeading">Listing posts</h1>
+  </div>
+  <% @posts.each do |post| %>
+    <div class = "postContainer" style = "float:left;">
+      
+      <div class = "title">    
+        <h3>Title</h3>
+        <span class = "postTitle"><%= post.title %></span>
+      </div>      
+      <div class = "bodyContainer">        
+        <h3>Body</h3>
+        <span class = "postBody"><%= post.body %></span>      
+      </div>
+      <div id = "controls">
+        <div class = "controls" ><%= link_to 'Show', post %></div>
+        <div class = "controls" ><%= link_to 'Edit', edit_post_path(post) %></div>
+        <div class = "controls" ><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+      
+    </div>
+  <% end %>
+  <br>
+  <div id = "newPost" style = "width:100%;float:left;margin-top:15px;">   
+    <%= link_to 'New Post', new_post_path %>
+  </div>
+</div>
