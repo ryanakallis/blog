@@ -355,3 +355,21 @@ width:125px;
 
 }
 
+.button input {
+
+background-color:#7abcff;
+border:none;
+border-radius: 15px 15px 15px 15px;
+
+}
+
+.button input:hover {
+
+color:#ffffff;
+cursor:pointer;
+cursor:hand;
+border:none;
+border-radius: 15px 15px 15px 15px;
+
+}
+

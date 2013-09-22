@@ -9,16 +9,11 @@
 	<div id = "blogEntry">
 		
 		
-		
 		<div id = "postBody">
 			
 			  <h3>:: message body ::</h3>
 			  	<p class = "body">
-				  	<%= 
-					  	str = @post.body
-						first_500_words = str.split(" ").first(500).join(" ")
-						first_500_chars = str[0..500]
-					  %>
+				  	<%= @post.body %>
 				</p>
 			
 
