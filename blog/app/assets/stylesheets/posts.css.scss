@@ -1,8 +1,366 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h2 {
+
+body {
+
+	width:100%;
+	height:97%;
+	overflow:scroll;
+}
+
+html {
+
+	width:100%;
+height:100%;
+}
+
+#wrapper {
+
+
+	padding-top:10px;
+	height:100%;
 	
+	min-width:300px;
+
+	width:80%;
+	padding:0;
+	margin:0;
+	margin-left:auto;
+	margin-right:auto;
+
+
+	box-shadow: 0 9px 0px 0px white,
+	 0 -9px 0px 0px white,
+	  12px 0 15px -10px rgba(31, 73, 125, 0.3),
+	  -12px 0 15px -10px	rgba(31, 73, 125, 0.3);
+
+}
+
+.postContainer{
+
+	float:left;
+	width:26%;
+	min-width:250px;
+	border:1px solid #cccccc;
+	padding-top:2px;
+	padding-right:15px;
+	padding-bottom:15px;
+	margin-right:3%;
+	margin-top:3%;
+	margin-left:10px;
+	border-radius:0 0 10px 10px;
+	padding-left:5px;
+
+	box-shadow: 0 9px 0px 0px white,
+	 0 -9px 0px 0px white,
+	  12px 0 15px -10px rgba(31, 73, 125, 0.2),
+	  -12px 0 15px -10px	rgba(31, 73, 125, 0.2);
+
+}
+
+.editContainer {
+
+
+float:left;
+	width:96%;
+	min-width:250px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	padding-top:2px;
+	padding-right:15px;
+	padding-bottom:15px;
+	margin-right:3%;
+	margin-top:3%;
+	margin-left:10px;
+	border-radius:0 0 10px 10px;
+	padding-left:5px;
+	margin-top:-18px;
+
+
+}
+
+
+#blogEntry {
+	
+	width:30%
+
+}
+
+.mainHeading {
+padding:25px;
+color:#ffffff;
+background: #7abcff; /* Old browsers */
+	background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+}
+
+.title{
+
+	
+	/*border:1px solid #ccc;*/
+	padding-left: 3%;
+	
+} 
+
+.title h3 {
+
+	display:inline;
+	color:#ffffff;
+	
+padding-top:5px;
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+background-color:#7abcff;
+border-radius: 0 0 7px 7px;
+font-size:13px;
+width:125px; 
+}
+
+span.postTitle {
+
+color:#333;
+margin:0;
+padding:0;
+margin-left:5px;
+padding-left:5px;
+background-color:#ccc;
+
+}
+
+span.postBody {
+
+
+
+}
+
+.bodyContainer {
+
+padding:0;
+margin:0;
+margin-top:15px;
+border:1px solid #efefef;
+min-height:100px;
+padding-left:15px;
+margin-left:5px;
+margin-bottom:5px;
+
+
+}
+
+.bodyContainer h3 { 
+text-align:left;
+padding:0;
+margin:0;
+margin-bottom:10px;
+padding-left:17px;
+padding-bottom:3px;
+background-color:#efefef;
+width:100%px;
+margin-left:-15px;
+
+}
+
+.controls a{
+
+	text-decoration:none;
+	margin:0;
+	padding:0;
+
+	float:left;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+#controls{
+
+margin-left:2px;
+
+}
+
+.destroy_1 a{
+
+
+	color:#333333;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+	padding-left:3px;
+	padding-right:3px;
+	float:right;
+	margin-top:-17px;
+
+}
+
+.destroy_1 a:hover{
+
+background-color:#ff0000;
+
+}
+.destroy_2 a{
+
+
+	color:#333333;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+	padding-left:3px;
+	padding-right:3px;
+	float:right;
 	
 
 }
+
+.destroy_2 a:hover{
+
+background-color:#ff0000;
+
+}
+
+#newPost {
+
+width:100%;
+
+float:left;
+
+}
+
+#newPost a{
+
+
+margin-top:auto;
+margin-left:10px;
+border:1px solid #efefef;
+padding:5px;
+background-color:#7abcff;
+border-radius: 5px 5px 5px 5px;
+color:#333333;
+text-decoration:none;
+display:inline;
+float:left;
+
+}
+
+#newPost a:hover{
+
+background-color:#7abcff;
+border-radius: 5px 5px 5px 5px;
+color:#ffffff;
+}
+
+h1 span{
+
+font-size:12px;
+margin-top:-15px;
+display: inline;
+border-left:24px solid #fff;
+padding-left:5px;
+
+}
+
+
+span.intro{
+
+padding-top:10px;
+
+}
+
+h1.mainHeading{
+
+padding:-30px;
+
+
+}
+
+
+span.notice{
+
+border:none;
+font-size :10px;
+
+}
+
+#blogEntry{
+
+border-left:1px solid #efefef;
+border-right:1px solid #efefef;
+border-bottom:1px solid #efefef;
+width:93%;
+min-width:500px;
+margin-left:2%;
+padding:20px;
+padding-left: 15px;
+margin-top:-17px;
+
+}
+
+#postBody{
+
+background-color: #efefef;
+padding:15px;
+
+}
+
+#postBody h3{
+
+padding-top:0;
+margin-top:-15px;
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+background-color:#7abcff;
+border-radius: 0 0 15px 15px;
+font-size:11px;
+width:100px;
+
+}
+
+#commentsBody {
+
+margin-top:30px;
+background-color:#efefef;
+padding:15px;
+padding-bottom:5px;
+
+}
+
+h3.commentsHeading {
+
+margin-top:-15px;
+padding-top:5px;
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+background-color:#7abcff;
+border-radius: 0 0 15px 15px;
+font-size:11px;
+width:125px;
+
+}
+
+.button input {
+
+background-color:#7abcff;
+border:none;
+border-radius: 15px 15px 15px 15px;
+
+}
+
+.button input:hover {
+
+color:#ffffff;
+cursor:pointer;
+cursor:hand;
+border:none;
+border-radius: 15px 15px 15px 15px;
+
+}
+

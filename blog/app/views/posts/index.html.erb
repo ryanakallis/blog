@@ -12,11 +12,7 @@
       </div>      
       <div class = "bodyContainer">        
         <h3> :: Message ::<div title = "Delete Post" class = "destroy_1" ><%= link_to 'X', post, method: :delete, data: { confirm: 'Are you sure?' } %></div></h3>
-        <span class = "postBody"><%= 
-              str = post.body
-            first_500_words = str.split(" ").first(500).join(" ")
-            first_500_chars = str[0..140]
-            %></span>      
+        <span class = "postBody"><%= post.body.truncate(500, omission: "... (continued)") %></span>      
       </div>
       <div id = "controls">
         <div title = "View Post"  class = "controls" ><%= link_to 'Show', post %></div>

@@ -1,18 +1,39 @@
 class CommentsController < ApplicationController
 
-# http_basic_authenticate_with name: "Angus", password: "eetsM!llerTime", only: :destroy
+  # http_basic_authenticate_with name: "Angus", password: "eetsM!llerTime", only: :destroy
 
-def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.create(params[:comment].permit(:commenter, :body))
-    redirect_to post_path(@post)
+  def create
+    @post    = Post.find(params[:post_id])
+    @comment = @post.comments.build(comment_params)
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @comment }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
-def destroy
-    @post = Post.find(params[:post_id])
+
+  def destroy
+    @post    = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
+    
     @comment.destroy
-    redirect_to post_path(@post)
+
+    respond_to do |format|
+      format.html { redirect_to post_path(@post) }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:post_id, :commenter, :body)
   end
 
 end

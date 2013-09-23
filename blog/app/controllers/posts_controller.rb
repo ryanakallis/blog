@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-# http_basic_authenticate_with name: "angus", password: "eetsM!llerTime", except: [:index, :show]
+  # http_basic_authenticate_with name: "angus", password: "eetsM!llerTime", except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comments = @post.comments
   end
 
   # GET /posts/new
@@ -21,6 +22,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+
   end
 
   # POST /posts
@@ -57,20 +59,21 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post.destroy
+
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to posts_path }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:title, :body)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def post_params
+    params.require(:post).permit(:title, :body, comments_attributes: [:commenter, :body])
+  end
 end
