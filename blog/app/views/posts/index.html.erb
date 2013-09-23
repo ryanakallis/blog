@@ -6,7 +6,7 @@
     <div class = "postContainer" >
       
       <div class = "title">    
-        <h3><%= post.title %>
+        <h3><%= link_to post.title, edit_post_path(post) %>
           <!-- <span class = "postTitle"></span> -->
         </h3>
       </div>      
