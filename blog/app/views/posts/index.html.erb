@@ -23,7 +23,10 @@
     </div>
   <% end %>
   <br />
-  <div id = "newPost" >   
-    <h3><%= link_to 'New Post' , new_post_path %><h3>
+  <div id = "newPost" > 
+  <% if current_user %>
+        <h3><%= link_to 'New Post' , new_post_path %><h3>
+        <% end %>  
+    
   </div>
 </div>

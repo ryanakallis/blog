@@ -918,3 +918,2301 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-23 09:59:21
 
 
 Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-09-23 09:59:21 -0700
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2013-10-26 16:19:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mComment Load (1.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (53.7ms)
+  Rendered posts/show.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 180ms (Views: 129.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 16:20:00 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 101ms (Views: 78.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 17:10:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20131026162851)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131026162851"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:53 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 18:36:56 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 18:41:26 +0200
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 18:41:37 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 18:41:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (undefined method `session_path' for #<#<Class:0x007f9af3ae7b90>:0x007f9af3b35958>):
+    1: <h2>Sign in</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    4:   <div><%= f.label :email %><br />
+    5:   <%= f.email_field :email, :autofocus => true %></div>
+    6: 
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___1005138956646218140_70151745221360'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.7ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 18:41:37 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 18:41:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `session_path' for #<#<Class:0x007f9af3ae7b90>:0x007f9af3f81d18>):
+    1: <h2>Sign in</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    4:   <div><%= f.label :email %><br />
+    5:   <%= f.email_field :email, :autofocus => true %></div>
+    6: 
+  app/views/devise/sessions/new.html.erb:3:in `_app_views_devise_sessions_new_html_erb___1005138956646218140_70151745221360'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 18:42:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 134ms (Views: 104.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 18:42:53 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 12ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 18:42:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 54ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-10-26 18:43:03 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cCTv1DgvwKcmmxP3NpiaysOaMOPfzUiNF05e4j1XLy4=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (4.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 16:44:25 UTC +00:00], ["email", "rynakallis@gmail.com"], ["encrypted_password", "$2a$10$HTEU56eiqHAkgiQrIGtV7u/zeowQ8Bgacsoe.rpKWj.1ZMSg2QD/i"], ["updated_at", Sat, 26 Oct 2013 16:44:25 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Sat, 26 Oct 2013 16:44:25 UTC +00:00], ["current_sign_in_at", Sat, 26 Oct 2013 16:44:25 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Sat, 26 Oct 2013 16:44:25 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4/edit
+Completed 302 Found in 102ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 18:44:25 +0200
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 18:44:33 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 18:44:41 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 18:44:47 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2013-10-26 18:45:19 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (16.2ms)
+  Rendered posts/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 64ms (Views: 24.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 18:58:03 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 18:58:04 +0200
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-10-26 18:58:13 +0200
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.8ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-10-26 18:58:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:03:16 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:19 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:20 +0200
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:03:22 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (2.5ms)
+  Rendered posts/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cCTv1DgvwKcmmxP3NpiaysOaMOPfzUiNF05e4j1XLy4="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:03:27 +0200
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:03:34 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:03:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2013-10-26 19:03:43 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (13.7ms)
+  Rendered posts/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2013-10-26 19:04:12 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (2.4ms)
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "comment"=>{"commenter"=>"", "body"=>""}, "commit"=>"Create Comment", "post_id"=>"4"}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:04:38 +0200
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-10-26 19:04:44 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"email"=>"ryanakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'ryanakallis@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"email"=>"ryanakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 82ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:19 +0200
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:25 +0200
+
+
+Started POST "/users/password" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"email"=>"ryanakallis@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'ryanakallis@gmail.com' LIMIT 1[0m
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:05:39 +0200
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/users/password" for 127.0.0.1 at 2013-10-26 19:07:22 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"email"=>"rynakallis@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'JwJwyXGxd3Quj95swsRj' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["reset_password_token", "JwJwyXGxd3Quj95swsRj"], ["reset_password_sent_at", Sat, 26 Oct 2013 17:07:22 UTC +00:00], ["updated_at", Sat, 26 Oct 2013 17:07:22 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered devise/mailer/reset_password_instructions.html.erb (2.5ms)
+Completed 500 Internal Server Error in 446ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, :reset_password_token => @resource.reset_password_token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb___3115137960430323844_70184431047980'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:12:58 +0200
+
+
+Started POST "/users/password" for 127.0.0.1 at 2013-10-26 19:13:00 +0200
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"email"=>"rynakallis@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.4ms)
+
+Sent mail to rynakallis@gmail.com (14.5ms)
+Date: Sat, 26 Oct 2013 19:13:01 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: rynakallis@gmail.com
+Message-ID: <526bf81d16155_3ed03fdfb224cc2464a6@Rowan.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello rynakallis@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost/users/password/edit?reset_password_token=JwJwyXGxd3Quj95swsRj">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 467ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:13:01 +0200
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:11 +0200
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2013-10-26 19:14:35 +0200
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE=", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Change my password"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = 'JwJwyXGxd3Quj95swsRj' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (3.0ms)[0m  [1mUPDATE "users" SET "encrypted_password" = ?, "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["encrypted_password", "$2a$10$R4KxYrgOgM2JvLK0QwbeaeUokXAmsILC6htLSjpF6HxVftrvflwm."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["updated_at", Sat, 26 Oct 2013 17:14:35 UTC +00:00]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", Sat, 26 Oct 2013 17:14:35 UTC +00:00], ["sign_in_count", 2], ["updated_at", Sat, 26 Oct 2013 17:14:35 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4/edit
+Completed 302 Found in 126ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:14:35 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (6.1ms)
+  Rendered posts/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 35ms (Views: 16.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:36 +0200
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1AzsMh/luKz3JwfjpktvbtEKtm+cv4V0o9N6WoAe+XE="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:14:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserToPost (20131026172332)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "posts" ADD "user" reference[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131026172332"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wYkBYZYKhLxMXwrPLgmENgjU1afPI0PgybT8QhsT9hU="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 67ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:30:55 +0200
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 19:30:58 +0200
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (3.0ms)
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/008bbrpzeZfTqTXL/+NKIVaftZb9lbQIURldTWscCQ="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:03 +0200
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:31:12 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:31:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gOfZQXpxdrBCYEArnFQVHvO0+JItvJ7hDeRLKj0jhBs=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Sat, 26 Oct 2013 17:14:35 UTC +00:00], ["current_sign_in_at", Sat, 26 Oct 2013 17:31:27 UTC +00:00], ["sign_in_count", 3], ["updated_at", Sat, 26 Oct 2013 17:31:27 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/4/edit
+Completed 302 Found in 84ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:27 +0200
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:31:33 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:39 +0200
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:31:41 +0200
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2013-10-26 19:31:46 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:31:48 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 19:31:56 +0200
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-26 19:32:08 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YQKtCgBW7zrtYv0Ihn7OBG+iHEsGeeXkIeB7pV1Pwg=", "post"=>{"title"=>"Hello", "body"=>"Whats for dinner?"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "Whats for dinner?"], ["created_at", Sat, 26 Oct 2013 17:32:08 UTC +00:00], ["title", "Hello"], ["updated_at", Sat, 26 Oct 2013 17:32:08 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2013-10-26 19:32:08 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (14.8ms)
+  Rendered posts/show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 73ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:32:09 +0200
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts"  WHERE "posts"."user_id" = ?
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20130919174632)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130919174632"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20130919182425)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar(255), "body" text, "post_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130919182425"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to DeviseCreateUsers (20131026162851)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131026162851"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddUserToPost (20131026172332)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "posts" ADD "user_id" reference
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131026172332"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7YQKtCgBW7zrtYv0Ihn7OBG+iHEsGeeXkIeB7pV1Pwg="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:33 +0200
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 19:39:37 +0200
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (13.8ms)
+  Rendered posts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v1CBEZWx3uPqghjoyCyPUtVecFPndag/+R97Tc/rqJM="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:39:57 +0200
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-10-26 19:40:00 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7n9KxVz/I9cTLVMUjFaJZt9rTDEhnot6FjD0ZANT6mg="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 19:40:00 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:40:01 +0200
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 19:40:02 +0200
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:40:20 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:52:34 +0200
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 19:52:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 73ms (Views: 43.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:56:43 +0200
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 19:59:01 +0200
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 20:01:04 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:04 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:04 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:04 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:05 +0200
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-26 20:01:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 3ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 81ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:25 +0200
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-10-26 20:01:32 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rynakallis@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rynakallis@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:33 +0200
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:37 +0200
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rowan.smith@cloudbi.co.za", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'rowan.smith@cloudbi.co.za' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 130ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:01:48 +0200
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rowan.smith@cloudbi.co.za", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'rowan.smith@cloudbi.co.za' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 93ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:16 +0200
+
+
+Started POST "/users" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "user"=>{"email"=>"rowan.smith@cloudbi.co.za", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'rowan.smith@cloudbi.co.za' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 18:02:28 UTC +00:00], ["email", "rowan.smith@cloudbi.co.za"], ["encrypted_password", "$2a$10$W9CFTTIYQql4tOCI2qhsXeE3UXjMP1c99bF8yBWXQ2sMT51CINhCy"], ["updated_at", Sat, 26 Oct 2013 18:02:28 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Sat, 26 Oct 2013 18:02:28 UTC +00:00], ["current_sign_in_at", Sat, 26 Oct 2013 18:02:28 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Sat, 26 Oct 2013 18:02:28 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 85ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:28 +0200
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 20:02:33 +0200
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/_form.html.erb (14.1ms)
+  Rendered posts/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "post"=>{"title"=>"ryan", "body"=>"kallis"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:39 +0200
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "post"=>{"title"=>"ryan kallis", "body"=>"Hello Ryan kallis"}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("body", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["body", "Hello Ryan kallis"], ["created_at", Sat, 26 Oct 2013 18:02:52 UTC +00:00], ["title", "ryan kallis"], ["updated_at", Sat, 26 Oct 2013 18:02:52 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (56.9ms)
+  Rendered posts/show.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 73ms (Views: 65.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:02:52 +0200
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-26 20:05:33 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 20:05:34 +0200
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/_form.html.erb (5.1ms)
+  Rendered posts/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 20:07:17 +0200
+
+SyntaxError (/Users/user/ryan/blog/blog/app/controllers/posts_controller.rb:79: syntax error, unexpected ')', expecting =>):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2252528822632655497__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.5ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/user/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/_form.html.erb (18.1ms)
+  Rendered posts/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 59ms (Views: 25.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:29 +0200
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WwU7Pv87ku7eqZSOPyljUwKioHOdXU5gEnbPDX4AOOA=", "post"=>{"title"=>"Hello there", "body"=>"Hello there", "user_id"=>"1"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Hello there"], ["created_at", Sat, 26 Oct 2013 18:08:50 UTC +00:00], ["title", "Hello there"], ["updated_at", Sat, 26 Oct 2013 18:08:50 UTC +00:00], ["user_id", "1"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (16.3ms)
+  Rendered posts/show.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-26 20:08:50 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?  [["user_id", 1]]

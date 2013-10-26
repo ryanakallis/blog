@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, only: [:edit, :destroy, :update, :new, :create]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # http_basic_authenticate_with name: "angus", password: "eetsM!llerTime", except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
+
   def index
     @posts = Post.all
   end
@@ -74,6 +76,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:post).permit(:title, :body, comments_attributes: [:commenter, :body])
+    params.require(:post).permit(:title, :body, :user_id, comments_attributes: [:commenter, :body] )
   end
 end
