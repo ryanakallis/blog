@@ -18,9 +18,12 @@
   <div class="field">
     <%= f.label :body %><br>
     <%= f.text_area :body %>
+    <BR />
+    <%= f.file_field :avatar %>
   </div>
   <p class = "button">
     <%= f.hidden_field :user_id, value: current_user.id  %>
     <%= f.submit %>
   </p>
+
 <% end %>

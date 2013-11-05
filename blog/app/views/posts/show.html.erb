@@ -44,6 +44,11 @@
 			<%= link_to 'Back', posts_path %>
 				
 		</div>
+		<%= image_tag @post.avatar.url%>
+		<%= image_tag @post.avatar.url(:medium) %>
+		<%= image_tag @post.avatar.url(:thumb) %>
+
+		
 
 		</div>
 		
